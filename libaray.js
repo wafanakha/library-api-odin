@@ -6,3 +6,5 @@ function Book(title, author, year, pages) {
   this.year = year;
   this.pages = pages;
 }
+
+function addBook(params) {}
