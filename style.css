@@ -14,4 +14,9 @@
   height: calc(100vh);
   font-family: "Silkscreen", sans-serif;
   color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
 }
