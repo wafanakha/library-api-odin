@@ -44,6 +44,8 @@ dialog {
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  background-color: var(--sec-color);
+  color: var(--main-color);
 }
 dialog form {
   display: flex;
