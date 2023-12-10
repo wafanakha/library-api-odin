@@ -24,6 +24,7 @@ function addBook(book) {
 
   const library = document.querySelector(".library");
   const bookCards = document.createElement("div");
+  bookCards.classList.add("book");
 
   const author = document.createTextNode(book.elements["author"].value);
   h2.appendChild(author);
