@@ -17,16 +17,31 @@ function addBook(book) {
   document.querySelector(".library h1").remove();
   document.querySelector(".library h2").remove();
 
+  const h1 = document.createElement("h1");
+  const h2 = document.createElement("h2");
+  const h3 = document.createElement("h3");
+  const h32 = document.createElement("h3");
+
   const library = document.querySelector(".library");
   const bookCards = document.createElement("div");
+
   const author = document.createTextNode(book.elements["author"].value);
+  h2.appendChild(author);
+
   const title = document.createTextNode(book.elements["title"].value);
+  h1.appendChild(title);
+
   const year = document.createTextNode(book.elements["year"].value);
+  h3.appendChild(year);
+
   const pages = document.createTextNode(book.elements["pages"].value);
-  bookCards.appendChild(author);
-  bookCards.appendChild(title);
-  bookCards.appendChild(year);
-  bookCards.appendChild(pages);
+  h32.appendChild(pages);
+
+  bookCards.appendChild(h1);
+  bookCards.appendChild(h2);
+  bookCards.appendChild(h3);
+  bookCards.appendChild(h32);
+
   library.appendChild(bookCards);
 }
 
