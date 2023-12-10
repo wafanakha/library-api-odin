@@ -9,6 +9,7 @@ function Book(title, author, year, pages, read) {
 }
 
 function addBook(book) {
+  console.log(book);
   document.querySelector(".library h1").remove();
   document.querySelector(".library h2").remove();
   const library = document.querySelector(".library");
@@ -32,5 +33,5 @@ const book = document.querySelector("#book");
 
 book.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(book.elements["year"].value);
+  addBook(book);
 });
