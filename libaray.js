@@ -22,28 +22,30 @@ function addBook(book) {
   const h3 = document.createElement("h3");
   const h32 = document.createElement("h3");
 
-  const library = document.querySelector(".library");
+  const divlibrary = document.querySelector(".library");
   const bookCards = document.createElement("div");
   bookCards.classList.add("book");
 
-  const author = document.createTextNode(book.elements["author"].value);
-  h2.appendChild(author);
+  const author = book.elements["author"].value;
 
-  const title = document.createTextNode(book.elements["title"].value);
-  h1.appendChild(title);
+  const title = book.elements["title"].value;
 
-  const year = document.createTextNode(book.elements["year"].value);
-  h3.appendChild(year);
+  const year = book.elements["year"].value;
 
-  const pages = document.createTextNode(book.elements["pages"].value);
-  h32.appendChild(pages);
+  const pages = book.elements["pages"].value;
+
+  const read = book.elements["read"].value;
+
+  var card = new Book(title, author, year, pages, read);
+
+  library.push(card);
 
   bookCards.appendChild(h1);
   bookCards.appendChild(h2);
   bookCards.appendChild(h3);
   bookCards.appendChild(h32);
 
-  library.appendChild(bookCards);
+  divlibrary.appendChild(bookCards);
 }
 
 showBtn.addEventListener("click", () => dialog.showModal());
