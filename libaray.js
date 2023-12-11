@@ -13,7 +13,6 @@ const showBtn = document.querySelector("#show");
 const closeBtn = document.querySelector("#close");
 
 function addBook(book) {
-  console.log(book);
   document.querySelector(".library h1").remove();
   document.querySelector(".library h2").remove();
 
@@ -39,13 +38,6 @@ function addBook(book) {
   var card = new Book(title, author, year, pages, read);
 
   library.push(card);
-
-  bookCards.appendChild(h1);
-  bookCards.appendChild(h2);
-  bookCards.appendChild(h3);
-  bookCards.appendChild(h32);
-
-  divlibrary.appendChild(bookCards);
 }
 
 showBtn.addEventListener("click", () => dialog.showModal());
