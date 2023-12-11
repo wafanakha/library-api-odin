@@ -53,6 +53,8 @@ dialog {
 dialog form {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  width: 50rem;
   gap: 1rem;
   padding: 3rem;
 }
