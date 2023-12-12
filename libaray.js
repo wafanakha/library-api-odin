@@ -36,11 +36,11 @@ const book = document.querySelector("#book");
 book.addEventListener("submit", (e) => {
   e.preventDefault();
   addBook(book);
+  libraryShow(library);
 });
 
 function libraryShow(library) {
-  const shelf = document.querySelector("#library");
-  library.length < 1 ? "show" : "close";
+  const shelf = document.querySelector(".library");
 
   library.forEach((element) => {
     const book = document.createElement("div");
@@ -71,5 +71,7 @@ function libraryShow(library) {
     book.appendChild(read);
 
     console.log(book);
+    console.log(shelf);
+    shelf.appendChild(book);
   });
 }
