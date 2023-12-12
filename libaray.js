@@ -49,3 +49,5 @@ book.addEventListener("submit", (e) => {
   e.preventDefault();
   addBook(book);
 });
+
+function libraryShow(library) {}
