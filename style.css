@@ -50,6 +50,18 @@ dialog {
   background-color: var(--sec-color);
   color: var(--main-color);
 }
+dialog[open] {
+  animation: fadein 0.4s ease-in-out;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 dialog form {
   display: flex;
   flex-wrap: wrap;

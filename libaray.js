@@ -50,4 +50,6 @@ book.addEventListener("submit", (e) => {
   addBook(book);
 });
 
-function libraryShow(library) {}
+function libraryShow(library) {
+  library.forEach((element) => {});
+}
