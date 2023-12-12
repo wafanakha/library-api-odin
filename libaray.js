@@ -41,6 +41,10 @@ book.addEventListener("submit", (e) => {
 
 function libraryShow(library) {
   const shelf = document.querySelector(".library");
+  if (library.length > 0) {
+    document.querySelector(".library h1").remove();
+    document.querySelector(".library h2").remove();
+  }
 
   library.forEach((element) => {
     const book = document.createElement("div");
