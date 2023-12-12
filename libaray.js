@@ -13,18 +13,6 @@ const showBtn = document.querySelector("#show");
 const closeBtn = document.querySelector("#close");
 
 function addBook(book) {
-  document.querySelector(".library h1").remove();
-  document.querySelector(".library h2").remove();
-
-  const h1 = document.createElement("h1");
-  const h2 = document.createElement("h2");
-  const h3 = document.createElement("h3");
-  const h32 = document.createElement("h3");
-
-  const divlibrary = document.querySelector(".library");
-  const bookCards = document.createElement("div");
-  bookCards.classList.add("book");
-
   const author = book.elements["author"].value;
 
   const title = book.elements["title"].value;
@@ -51,5 +39,22 @@ book.addEventListener("submit", (e) => {
 });
 
 function libraryShow(library) {
-  library.forEach((element) => {});
+  library.length < 1 ? "show" : "close";
+
+  library.forEach((element) => {
+    const titleNode = document.createTextNode(element.title);
+    const title = document.createElement("h1").appendChild(titleNode);
+
+    const authorNode = document.createTextNode(element.author);
+    const author = document.createElement("h1").appendChild(authorNode);
+
+    const pagesNode = document.createTextNode(element.pages);
+    const pages = document.createElement("h1").appendChild(pagesNode);
+
+    const yearNode = document.createTextNode(element.year);
+    const year = document.createElement("h1").appendChild(yearNode);
+
+    const readNode = document.createTextNode(element.read);
+    const read = document.createElement("h1").appendChild(readNode);
+  });
 }
