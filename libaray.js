@@ -39,22 +39,37 @@ book.addEventListener("submit", (e) => {
 });
 
 function libraryShow(library) {
+  const shelf = document.querySelector("#library");
   library.length < 1 ? "show" : "close";
 
   library.forEach((element) => {
+    const book = document.createElement("div");
+
     const titleNode = document.createTextNode(element.title);
-    const title = document.createElement("h1").appendChild(titleNode);
+    const title = document.createElement("h1");
+    title.appendChild(titleNode);
+    book.appendChild(title);
 
     const authorNode = document.createTextNode(element.author);
-    const author = document.createElement("h1").appendChild(authorNode);
+    const author = document.createElement("h2");
+    author.appendChild(authorNode);
+    book.appendChild(author);
 
     const pagesNode = document.createTextNode(element.pages);
-    const pages = document.createElement("h1").appendChild(pagesNode);
+    const pages = document.createElement("h3");
+    pages.appendChild(pagesNode);
+    book.appendChild(pages);
 
     const yearNode = document.createTextNode(element.year);
-    const year = document.createElement("h1").appendChild(yearNode);
+    const year = document.createElement("h3");
+    year.appendChild(yearNode);
+    book.appendChild(year);
 
     const readNode = document.createTextNode(element.read);
-    const read = document.createElement("h1").appendChild(readNode);
+    const read = document.createElement("h3");
+    read.appendChild(readNode);
+    book.appendChild(read);
+
+    console.log(book);
   });
 }
