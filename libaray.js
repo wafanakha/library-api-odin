@@ -50,7 +50,7 @@ function libraryShow(library) {
 
   library.forEach((element) => {
     const book = document.createElement("div");
-    book.classList.add("book-list");
+    book.classList.add("shelf-book");
 
     const titleNode = document.createTextNode(element.title);
     const title = document.createElement("h1");
@@ -80,5 +80,11 @@ function libraryShow(library) {
     console.log(book);
     console.log(shelf);
     shelf.appendChild(book);
+    shelfLook();
   });
+}
+
+function shelfLook() {
+  const libraryDiv = document.querySelector(".library");
+  libraryDiv.classList.add("library-shelf");
 }
