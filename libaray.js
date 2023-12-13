@@ -54,6 +54,7 @@ function libraryShow(library) {
 
     const titleNode = document.createTextNode(element.title);
     const title = document.createElement("h1");
+    title.append("Title: ");
     title.appendChild(titleNode);
     book.appendChild(title);
 
