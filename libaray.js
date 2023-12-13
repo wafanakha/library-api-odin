@@ -44,10 +44,13 @@ function libraryShow(library) {
   if (library.length > 0) {
     document.querySelector(".library h1").remove();
     document.querySelector(".library h2").remove();
+    const books = document.querySelectorAll(".book-list");
+    books.forEach((e) => e.remove());
   }
 
   library.forEach((element) => {
     const book = document.createElement("div");
+    book.classList.add("book-list");
 
     const titleNode = document.createTextNode(element.title);
     const title = document.createElement("h1");
