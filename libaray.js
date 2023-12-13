@@ -60,21 +60,25 @@ function libraryShow(library) {
 
     const authorNode = document.createTextNode(element.author);
     const author = document.createElement("h2");
+    author.append("Author: ");
     author.appendChild(authorNode);
     book.appendChild(author);
 
     const pagesNode = document.createTextNode(element.pages);
     const pages = document.createElement("h3");
+    pages.append("Pages: ");
     pages.appendChild(pagesNode);
     book.appendChild(pages);
 
     const yearNode = document.createTextNode(element.year);
     const year = document.createElement("h3");
+    year.append("Year: ");
     year.appendChild(yearNode);
     book.appendChild(year);
 
     const readNode = document.createTextNode(element.read);
     const read = document.createElement("h3");
+    read.append("read/not: ");
     read.appendChild(readNode);
     book.appendChild(read);
 
