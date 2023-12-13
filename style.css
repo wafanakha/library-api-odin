@@ -112,3 +112,6 @@ dialog form p {
   border: 2px solid var(--main-color);
   padding: 1rem;
 }
+.welcome {
+  border: none;
+}
