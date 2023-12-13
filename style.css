@@ -105,8 +105,8 @@ dialog form p {
 
 .library-shelf {
   flex-direction: row;
-  justify-content: start;
-  align-items: start;
+
+  flex-wrap: wrap;
 }
 .shelf-book {
   border: 2px solid var(--main-color);
