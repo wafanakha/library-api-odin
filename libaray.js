@@ -71,10 +71,11 @@ function libraryShow(library) {
     year.append("Year: ");
     year.appendChild(yearNode);
     book.appendChild(year);
-
-    const readNode = document.createTextNode(element.read);
+    let readNode;
+    element.read
+      ? (readNode = document.createTextNode("Have read"))
+      : (readNode = document.createTextNode("Unread"));
     const read = document.createElement("h3");
-    read.append("read/not: ");
     read.appendChild(readNode);
     book.appendChild(read);
 
