@@ -82,11 +82,14 @@ function libraryShow(library) {
     read.appendChild(readNode);
     book.appendChild(read);
 
-    console.log(book);
-    console.log(shelf);
     shelf.appendChild(book);
     shelfLook();
   });
+
+  const newShow = document.createElement("button");
+  newShow.appendChild(document.createTextNode("Add Book"));
+  newShow.setAttribute("id", "show");
+  shelf.appendChild(newShow);
 }
 
 function shelfLook() {
