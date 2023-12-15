@@ -26,6 +26,8 @@ function addBook(book) {
   var card = new Book(title, author, year, pages, read);
 
   library.push(card);
+
+  showBtn.remove();
 }
 
 showBtn.addEventListener("click", () => dialog.showModal());
@@ -71,6 +73,7 @@ function libraryShow(library) {
     year.append("Year: ");
     year.appendChild(yearNode);
     book.appendChild(year);
+
     let readNode;
     element.read
       ? (readNode = document.createTextNode("Have read"))
