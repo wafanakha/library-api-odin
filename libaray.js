@@ -21,7 +21,7 @@ function addBook(book) {
 
   const pages = book.elements["pages"].value;
 
-  const read = book.elements["read"].value;
+  const read = book.elements["read"].checked;
 
   var card = new Book(title, author, year, pages, read);
 
