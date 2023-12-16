@@ -85,11 +85,13 @@ function libraryShow(library) {
     shelf.appendChild(book);
     shelfLook();
   });
-
-  const newShow = document.createElement("button");
-  newShow.appendChild(document.createTextNode("Add Book"));
-  newShow.setAttribute("id", "show");
-  shelf.appendChild(newShow);
+  if (!document.querySelector("#show")) {
+    const newShow = document.createElement("button");
+    newShow.appendChild(document.createTextNode("Add Book"));
+    newShow.setAttribute("id", "show");
+    shelf.appendChild(newShow);
+    newShow.addEventListener("click", () => dialog.showModal());
+  }
 }
 
 function shelfLook() {
