@@ -11,6 +11,7 @@ function Book(title, author, year, pages, read) {
 const dialog = document.querySelector("dialog");
 const showBtn = document.querySelector("#show");
 const closeBtn = document.querySelector("#close");
+let bookRemoveBtn = "";
 
 function addBook(book) {
   const author = book.elements["author"].value;
@@ -46,7 +47,7 @@ function libraryShow(library) {
   const books = document.querySelectorAll(".shelf-book");
   books.forEach((e) => e.remove());
 
-  library.forEach((element) => {
+  library.forEach((element, index) => {
     const book = document.createElement("div");
     book.classList.add("shelf-book");
 
@@ -82,9 +83,12 @@ function libraryShow(library) {
     read.appendChild(readNode);
     book.appendChild(read);
 
-    const bookRemoveBtn = document.createElement("button");
+    bookRemoveBtn = document.createElement("button");
     bookRemoveBtn.appendChild(document.createTextNode("Remove Book"));
     book.appendChild(bookRemoveBtn);
+    bookRemoveBtn.addEventListener("click", () => {
+      library.splice(index, 1);
+    });
 
     shelf.appendChild(book);
     shelfLook();
