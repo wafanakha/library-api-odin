@@ -82,9 +82,14 @@ function libraryShow(library) {
     read.appendChild(readNode);
     book.appendChild(read);
 
+    const bookRemoveBtn = document.createElement("button");
+    bookRemoveBtn.appendChild(document.createTextNode("Remove Book"));
+    book.appendChild(bookRemoveBtn);
+
     shelf.appendChild(book);
     shelfLook();
   });
+
   if (document.querySelector("#show") != null) {
     document.querySelector("#show").remove();
   }
