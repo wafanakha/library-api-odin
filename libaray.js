@@ -88,6 +88,7 @@ function libraryShow(library) {
     book.appendChild(bookRemoveBtn);
     bookRemoveBtn.addEventListener("click", () => {
       library.splice(index, 1);
+      libraryShow(library);
     });
 
     shelf.appendChild(book);
