@@ -85,13 +85,14 @@ function libraryShow(library) {
     shelf.appendChild(book);
     shelfLook();
   });
-  if (!document.querySelector("#show")) {
-    const newShow = document.createElement("button");
-    newShow.appendChild(document.createTextNode("Add Book"));
-    newShow.setAttribute("id", "show");
-    shelf.appendChild(newShow);
-    newShow.addEventListener("click", () => dialog.showModal());
+  if (document.querySelector("#show") != null) {
+    document.querySelector("#show").remove();
   }
+  const newShow = document.createElement("button");
+  newShow.appendChild(document.createTextNode("Add Book"));
+  newShow.setAttribute("id", "show");
+  shelf.appendChild(newShow);
+  newShow.addEventListener("click", () => dialog.showModal());
 }
 
 function shelfLook() {

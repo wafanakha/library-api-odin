@@ -29,7 +29,7 @@ button:hover,
 }
 .library {
   background-color: var(--sec-color);
-  height: calc(100vh);
+  min-height: 100vh;
   font-family: "Silkscreen", sans-serif;
   color: var(--main-color);
   display: flex;
