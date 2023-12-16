@@ -91,6 +91,14 @@ function libraryShow(library) {
       libraryShow(library);
     });
 
+    const readChange = document.createElement("button");
+    readChange.appendChild(document.createTextNode("Check"));
+    book.appendChild(readChange);
+    readChange.addEventListener("click", () => {
+      element.read = !element.read;
+      libraryShow(library);
+    });
+
     shelf.appendChild(book);
     shelfLook();
   });
