@@ -83,19 +83,19 @@ function libraryShow(library) {
     read.appendChild(readNode);
     book.appendChild(read);
 
-    bookRemoveBtn = document.createElement("button");
-    bookRemoveBtn.appendChild(document.createTextNode("Remove Book"));
-    book.appendChild(bookRemoveBtn);
-    bookRemoveBtn.addEventListener("click", () => {
-      library.splice(index, 1);
-      libraryShow(library);
-    });
-
     const readChange = document.createElement("button");
     readChange.appendChild(document.createTextNode("Check"));
     book.appendChild(readChange);
     readChange.addEventListener("click", () => {
       element.read = !element.read;
+      libraryShow(library);
+    });
+
+    bookRemoveBtn = document.createElement("button");
+    bookRemoveBtn.appendChild(document.createTextNode("Remove Book"));
+    book.appendChild(bookRemoveBtn);
+    bookRemoveBtn.addEventListener("click", () => {
+      library.splice(index, 1);
       libraryShow(library);
     });
 
